@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="keywords" content="关键词">
+  <meta name="description" content="描述">
+  <meta name="author" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <style>
+    body{font-family: "Microsoft YaHei",serif;user-select:none;}
+    body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+    ol,ul,li{margin:0;padding:0;list-style:none;}
+    img{border:none;display:block;}
+    a{text-decoration:none;color:#000;}
+    h2{
+      text-align: center;
+    }
+    .wrap{
+      width: 800px;
+      margin: 50px auto 0;
+    }
+    .banner{
+      width: 800px;
+      background-color: #ccc;
+    }
+    .banner::after{
+      content: '';
+      display: block;
+      height: 0;
+      visibility: hidden;
+      clear: both;
+    }
+    .banner > div{
+      float: left;
+      height: 200px;
+    }
+    .left,
+    .right{
+      position: relative;
+      background-color: blue;
+    }
+    .left{
+      width: 200px;
+      margin-left: -200px;
+      left: 200px;
+    }
+    .right{
+      width: 180px;
+      margin-left: -180px;
+    }
+    .middle{
+      width: 100%;
+      overflow: hidden;
+    }
+    .main{
+      margin: 0 180px 0 200px;
+      height: 100%;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <header></header>
+  <div class="wrap">
+    <h2>双飞翼布局</h2>
+    <div class="banner">
+      <div class="left"></div>
+      <div class="middle">
+        <div class="main">双飞翼布局</div>
+      </div>
+      <div class="right"></div>
+    </div>
+  </div>
+  <footer></footer>
+
+  <script></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;user-select:none;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;display:block;}
+            a{text-decoration:none;color:#000;}
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+          <ul>
+            <li>1.创建一个长度为5的空数组arr</li>
+            <li>2.生成一个（2-32）之间的随机整数rand</li>
+            <li>3.把随机整数rand插入到数组arr内，如果数组arr内已存在与rand相同的数字，则重新生成随机数rand并插入到数组内（使用递归实现，不能使用for/while循环）</li>
+            <li>4.最终输出一个长度为5，且内容不重复的数组</li>
+          </ul>
+        </div>
+
+        <script>
+          const arr = new Array(5);
+          let index = 0;
+          push();
+          function push () {
+            const random = Math.floor(Math.random() * 31) + 2;
+            if (arr.includes(random)) {
+              push();
+              return;
+            }
+            arr[index] = random;
+            index++;
+            if (index < 5) {
+              push(index);
+            }
+          }
+          setTimeout(() => {
+            alert(arr);
+          }, 3000);
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
