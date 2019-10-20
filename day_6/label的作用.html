@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="描述">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+        body{font-family: "Microsoft YaHei",serif;user-select:none;}
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;display:block;}
+        a{text-decoration:none;color:#000;}
+        .wrap{
+            width: 400px;
+            height: 200px;
+            margin: 50px auto;
+        }
+        .label label{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #000;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+        }
+        .wrap > div{
+            width: 400px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .item{
+            position: relative;
+            width: 400px;
+            height: 200px;
+        }
+        input{
+            display: block;
+            position: absolute;
+            width: 1px;
+            height: 200px;
+            overflow: hidden;
+            z-index: -1;
+            border: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id='wrap' class='wrap'>
+        <div>
+            <div class="item" style="background-color: red">
+                <input type="text" id="a">
+                <p>第一个</p>
+            </div>
+            <div class="item" style="background-color: yellow">
+                <input type="text" id="b">
+                <p>第二个</p>
+            </div>
+            <div class="item" style="background-color: gray">
+                <input type="text" id="c">
+                <p>第三个</p>
+            </div>
+            <div class="item" style="background-color: pink">
+                <input type="text" id="d">
+                <p>第四个</p>
+            </div>
+            <div class="item" style="background-color: blue">
+                <input type="text" id="e">
+                <p>第五个</p>
+            </div>
+        </div>
+        <div class="label">
+            <label for="a">1</label>
+            <label for="b">2</label>
+            <label for="c">3</label>
+            <label for="d">4</label>
+            <label for="e">5</label>
+        </div>
+    </div>
+
+    <script>
+    </script>
+</body>
+</html>
