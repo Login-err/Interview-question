@@ -34,12 +34,12 @@
             height: 200px;
             overflow: hidden;
         }
-        .item{
+        .first .item{
             position: relative;
             width: 400px;
             height: 200px;
         }
-        input{
+        .first input{
             display: block;
             position: absolute;
             width: 1px;
@@ -49,11 +49,22 @@
             border: 0;
             padding: 0;
         }
+        .second input,
+        .hide,
+        .more,
+        .toggle:checked ~ label .show{
+            position: absolute;
+            left: -99999px;
+        }
+        .toggle:checked ~ .more,
+        .toggle:checked ~ label .hide{
+            position: static;
+        }
     </style>
 </head>
 <body>
     <div id='wrap' class='wrap'>
-        <div>
+        <div class="first">
             <div class="item" style="background-color: red">
                 <input type="text" id="a">
                 <p>第一个</p>
@@ -83,7 +94,15 @@
             <label for="e">5</label>
         </div>
     </div>
-
+    <div class="wrap second">
+        我是不隐藏的内容
+        <input type="checkbox" id="toggle" class="toggle">
+        <p class="more">我是隐藏的</p>
+        <label for="toggle">
+            <span class="hide">收起</span>
+            <span class="show">展开</span>
+        </label>
+    </div>
     <script>
     </script>
 </body>
