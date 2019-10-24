@@ -18,9 +18,12 @@
     </head>
     <body>
         <div id='wrap' class='wrap'>
-            <iframe src="child.html" frameborder="0"></iframe>
+            <iframe src="child.html" id="child" frameborder="0"></iframe>
         </div>
         <script type='text/javascript'>
+            window.onload = function() {
+                window.frames[0].postMessage({ a: '1' }, '*');
+            };
         </script>
     </body>
 </html>
