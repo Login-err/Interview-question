@@ -400,23 +400,249 @@
 ##### Array
 
 * Array对象属性
+
     * length
+
+        设置或返回数组中元素的数目
+
     * constructor
+
+        返回对创建此对象的数组函数的引用
+
     * prototype
+
+        是您有能力向对象添加属性和方法
+
 * Array对象方法
+
     * concat()
-    * join()
+
+        * 连接两个数组或多个数组，该方法不会改变现有的数组，返回一个已经连接好的数组
+
+        * 如果进行concat()操作的参数是数组，那么添加的是数组中的元素，而不是数组
+* join()
+    
+    * 把数组中的元素放入一个字符串，元素是通过指定的分隔符进行分隔的
+        * 若省略了分隔符参数，则使用逗号作为分隔符
     * push()
-    * pop()
-    * shift()
-    * unshift()
-    * reverse()
+
+        * 向数组的末尾添加一个或多个元素，并返回新的数组长度
+* pop()
+    
+    * 用于删除数组的最后一个元素，把数组的长度减1，并返回被删除的元素
+        * 如果数组已经为空，则pop（）不改变数组，并返回undefined
+* shift()
+    
+        * 用于把数组的第一个元素从其中删除，并返回被移除的这个元素
+    * 如果数组是空的，那么shift()方法将不再进行如果操作，返回undefined
+        * 该方法直接改变原数组
+* unshift()
+    
+        * 向数组的开头添加一个或更多元素，并返回新的数组长度
+        * 该方法是直接修改原数组
+* reverse()
+    
+    * 用于颠倒数组中的元素的顺序
+        * 该方法会直接修改原数组
     * sort()
-    * slice()
-    * splice()
-    * map()
+
+        * 用于对数组的元素进行排序
+    * 该排序直接修改原数组
+        * 该方法接收一个可选参数，将按字母顺序对数组元素进行排序（字符编码顺序排序）
+        * 里面提供比较函数小于0升序，大于0降序
+* slice(start,end)
+    
+    * 截取原数组的start到end位置
+        * 该方法返回一个新数组
+        * 未指定end参数的话，则从start可以截取到最后
+    * splice(index, count, [newArr])
+    
+    * 删除从index开始的count个数，并将删除的部分用newArr替换
+        * 直接修改原数组
+* map()
+    * 返回一个新数组
     * filter()
-    * some()
-    * every()
+    * 返回一个符合回调函数的数组
+* some()
+    * 判断是否有元素符合回调函数的条件
+* every()
+    * 判断所有元素是否符合回调函数的条件
     * forEach()
+* 没有返回值，只是具有变量功能
     * reduce()
+    * reduce有两个参数，第一个参数是回调函数，用于针对数组项操作，第二个参数则是传入的初始值，这个初始值用户单个数组项的操作。需注意的是，reduce返回的并不是数组，而是经过叠加处理后的值
+
+#### Date类型
+
+创建Date对象的四种方式
+
+```javascript
+const now = new Date();
+const date1 = new Date('2019/10/26 09:12:55');
+const date2 = new Date(2019 10 26 09 12 55);
+const oldDate = new Date("1994/02/04");
+const newDate = new Date(oldDate); //复制一个时间对象
+```
+
+日期API
+
+* getFullYear()
+* getMonth()     0-11
+* getDate()
+* getHours()
+* getMinutes();
+* getSeconds()
+
+##### RegExp对象
+
+##### Function类型
+
+###### Function对象属性
+
+1. arguments
+    * .length：获取实参个数
+    * .callee：获取参数本身引用的对象
+    * .callee.length：获取函数形参的个数
+
+###### Function对象方法
+
+1. toString()
+    * 功能：将函数体转换为对应的字符串
+
+##### Boolean类型
+
+1. toString()
+    * 功能：根据布尔值返回字符串true或者false
+2. valueof（）
+    * 功能：返回Boolean对象的原始值
+
+##### Number类型
+
+1. toString（）
+
+    功能：将Number数值转换为字符串，里面可接收一个参数，代表着转为了几进制的字符串
+
+    > const num = 10
+    >
+    > console.log(num.toString(2)); //1010
+
+2. toLocaleString()
+
+    功能：把一个Number对象转换为本地格式的字符串
+
+3. valueOf（）
+
+    功能：返回一个Number对象的基本数字值
+
+##### String类型
+
+##### String对象属性
+
+1. length
+
+###### String对象方法
+
+1. charAt()
+
+    返回指定位置的字符
+
+    0-length之间，没在返回空字符串
+
+2. charCodeAt()
+
+    返回指定位置的字符的Unicode编码
+
+    不在0-length之间返回NaN
+
+3. indexOf()
+
+    返回下标
+
+    没有返回-1
+
+4. lastIndexOf()
+
+    从后面开始检索
+
+5. match()
+
+    返回指定位置的字符
+
+6. replace()
+
+7. search()
+
+    返回字符串中第一次匹配到的位置下标
+
+8. toLowerCase() / toUpperCase()
+
+9. concat()
+
+10. split()
+
+11. slice()
+
+12. substr()
+
+    截取一段字符串，第二个参数为截取长度
+
+13. substring()
+
+    截取一段字符串，第二个参数为结束位置
+
+#### Global对象（全局对象）
+
+###### 属性
+
+infinity
+
+代表正的无穷大的数值
+
+NaN
+
+代表非数字的值
+
+Undefined
+
+未定义的值
+
+###### 方法
+
+* encodeURI
+* encodeURIComponent
+
+>encodeURI和encodeURIComponent的区别：
+>
+>它们都是编码URL，唯一区别就是编码的字符范围，其中encodeURI方法不会对下列字符编码 ASCII字母、数字、~!@#$&*()=:/,;?+'
+>encodeURIComponent方法不会对下列字符编码 ASCII字母、数字、~!*()'
+>所以encodeURIComponent比encodeURI编码的范围更大。
+>实际例子来说，encodeURIComponent会把 http:// 编码成 http%3A%2F%2F 而encodeURI却不会。
+
+* parseInt()
+
+    解析一个字符串，返回一个整数
+
+* parseFloat
+
+    解析一个字符串，返回一个浮点数
+
+* inFinite
+
+     用于检查其参数是否是无穷大。 
+
+* isNaN
+
+     用于检查其参数是否为非数字值 
+
+* Number
+
+     把对象的值转换为数字
+
+* String
+
+     把对象的值转换为字符串
+
+#### JOSN
+
+* JSON.parse()
+* JSON.stringify
