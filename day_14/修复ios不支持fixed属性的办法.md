@@ -1,0 +1,1 @@
+给页面最外层设置屏幕高度，在设置overflow：scroll和position：relative，然后给需要固定到底部的区域设置position：absolute
